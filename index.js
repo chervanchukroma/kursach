@@ -6,7 +6,7 @@ const superagent = require('superagent');
 
 const program = new Command();
 
-// Оголошуємо опції командного рядка
+// РћРіРѕР»РѕС€СѓС”РјРѕ РѕРїС†С–С— РєРѕРјР°РЅРґРЅРѕРіРѕ СЂСЏРґРєР°
 program
     .requiredOption('-h, --host <host>', 'server host')
     .requiredOption('-p, --port <port>', 'server port')
@@ -17,7 +17,7 @@ const options = program.opts();
 
 const cacheDir = options.cache;
 
-// Створюємо сервер
+// РЎС‚РІРѕСЂСЋС”РјРѕ СЃРµСЂРІРµСЂ
 const server = http.createServer(async (req, res) => {
     const code = req.url.substring(1);
     const filePath = path.join(cacheDir, `${code}.jpg`);
